@@ -1,0 +1,116 @@
+$sidebar-link-color: #0A73B9;
+$sidebar-link-width: 100%;
+$sidebar-link-icon-fontSize: 18px;
+$sidebar-link-icon-width: 20px;
+$sidebar-link-hover-active-color: #D1D9E4;
+$sidebar-background-color:#19122c;
+$sidebar-link-icon-transition: transform 0.5s ease-in-out;
+$menu-children-title: 14px;
+$submenu-padding-left: 46px;
+$base-bg: #e5e5e9 !default;
+$padding-sidebar-link: 10px 35px;
+$dropdown-bg: lighten( $base-bg, 5% ) !default;
+
+$arrow-width: 30px;
+$arrow-margin-left:-32px;
+
+
+.sidebar-link-app {
+  display: flex;
+  align-items: center;
+  padding: $padding-sidebar-link;
+  color: $sidebar-link-color;
+  text-decoration: none;
+  transition: 0.3s;
+  &:hover {
+    color:$sidebar-link-color;
+    text-decoration: none;
+  }
+}
+.active-sidebar-link {
+  color:$sidebar-link-color;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: $sidebar-link-hover-active-color;
+  &:hover {
+    color:$sidebar-link-color;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+}
+
+.sidebar-link-app-left {
+  display: flex;
+  align-items: center;
+}
+
+.vsm--arrow {
+  width: $arrow-width;
+  text-align: center;
+  margin-left: $arrow-margin-left;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 12px;
+  transition: 0.3s transform ease;
+  &:after {
+    content: '\f105';
+    font-family: 'Font Awesome 5 Free', serif;
+  }
+  &_open {
+    transform: rotate(90deg);
+  }
+}
+
+.containSubmenu:hover {
+  background-color: $sidebar-link-hover-active-color;
+  text-decoration: none;
+}
+.showMenu {
+  background-color: $dropdown-bg;
+}
+
+.showMenu li a.sidebar-link-app {
+  padding-left: $submenu-padding-left;
+}
+
+.showMenu li a .sidebar-link-containSubMenu-title {
+  font-size: $menu-children-title;
+}
+
+
+.expand-enter-active, .expand-leave-active {
+  transition: height .5s ease-in-out;
+  overflow: hidden;
+}
+
+ul {
+  padding: 0;
+}
+
+ul a {
+  cursor: pointer;
+}
+
+
+
+.activeMenu {
+  color:$sidebar-link-color;
+  text-decoration: none;
+  font-weight: bold;
+  &:hover {
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+

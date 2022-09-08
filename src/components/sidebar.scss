@@ -1,0 +1,29 @@
+$sidebar-padding-bottom:10px;
+$sidebar-width: 56px;
+$sidebar-background-color: #eaecef;
+$sidebar-hover-width:250px;
+
+.sidebar-app {
+  min-width: $sidebar-hover-width;
+  max-width: $sidebar-hover-width;
+  height: 100vh;
+  display: block;
+  padding-top: 4rem;
+  background: $sidebar-background-color;
+  padding-bottom: $sidebar-padding-bottom;
+  transition: all 600ms ease-in-out;
+}
+
+.nav-app {
+  height: 100%;
+  overflow: hidden;
+}
+
+.activeSide{
+  visibility: visible;
+}
+.disableSide{
+  visibility: hidden;
+  max-width: 0;
+  min-width: 0;
+}

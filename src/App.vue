@@ -1,32 +1,94 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view />
+  <div>
+    <SideBar
+      :menus="menus"
+      :showmenu="showmenu"
+      :isOpen="isOpen"
+      :showSide="showSide"
+    >
+    </SideBar>
+    <router-view></router-view>
   </div>
 </template>
 
+<script lang="ts">
+import Vue from "vue";
+
+export default Vue.extend({
+  name: "App",
+  data() {
+    return {
+      menus: [
+        {
+          link: "/settingsOrchestre",
+          titleMenu: "SettingsOrchestre",
+          menuIcon: "fa-face",
+        },
+        {
+          link: "/featuresOrchestre",
+          titleMenu: "Features",
+          menuIcon: "streetview",
+          subMenus: [
+            {
+              title: "PagesOrchestre",
+              link: "/pagesOrchestre",
+              icon: "streetview",
+            },
+            {
+              title: "ElementsOrchestre",
+              link: "/elementsOrchestre",
+              icon: "streetview",
+            },
+          ],
+        },
+        {
+          link: "/ServicesOrchestre",
+          titleMenu: "Services",
+          menuIcon: "face",
+          subMenus: [
+            {
+              title: "App Design Orchestre",
+              link: "/app-designOrchestre",
+              icon: "account_circle",
+            },
+            {
+              title: "Web Design Orchestre",
+              link: "/web-designOrchestre",
+              icon: "work",
+            },
+          ],
+        },
+        {
+          link: "/OverviewOrchestre",
+          titleMenu: "OverviewOrchestre",
+          menuIcon: "settings",
+        },
+        {
+          link: "/Test",
+          titleMenu: "Test",
+          menuIcon: "settings",
+          subMenus: [
+            {
+              title: "test-0",
+              link: "/test-0",
+              icon: "account_circle",
+            },
+            {
+              title: "Test 1",
+              link: "/test-1",
+              icon: "work",
+            },
+          ],
+        },
+      ],
+      showmenu: false,
+      isOpen: false,
+      showSide: true,
+    };
+  },
+});
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+@import "app.scss";
 </style>

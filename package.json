@@ -1,19 +1,36 @@
 {
   "name": "orchestrator-app-sidebar",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.1",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build-library": "vue-cli-service build --target lib --name SideBar src/plugin/index.ts",
+    "docs:build": "vuepress build vuepressdocs",
+    "docs:dev": "vuepress dev vuepressdocs",
+    "docgen": "concurrently \"vue-docgen --watch\" \"vuepress dev docs\"",
+    "styleguide": "vue-cli-service styleguidist",
+    "styleguide:build": "vue-cli-service styleguidist:build"
   },
+  "main": "./dist/SideBar.common.js",
+  "files": [
+    "dist/*"
+  ],
   "dependencies": {
+    "bootstrap": "^4.6.0",
+    "bootstrap-vue": "^2.21.2",
+    "concurrently": "^7.4.0",
     "core-js": "^3.8.3",
+    "material-icons": "^1.10.8",
     "vue": "^2.6.14",
+    "vue-docgen-api": "^4.52.0",
+    "vue-navbar-customise": "^0.0.1",
     "vue-router": "^3.5.1",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.0.0",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vue/cli-plugin-babel": "~5.0.0",
@@ -23,6 +40,7 @@
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "@vue/eslint-config-typescript": "^9.1.0",
+    "babel-core": "^6.26.3",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
@@ -31,6 +49,9 @@
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
     "typescript": "~4.5.5",
-    "vue-template-compiler": "^2.6.14"
+    "vue-cli-plugin-styleguidist": "~4.45.1",
+    "vue-docgen-cli": "^4.51.0",
+    "vue-template-compiler": "^2.6.14",
+    "vuepress": "^1.9.7"
   }
 }

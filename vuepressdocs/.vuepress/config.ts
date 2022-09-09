@@ -2,7 +2,6 @@ import { defineConfig } from "vuepress/config";
 
 export default defineConfig({
     title: "Orchestrator-app-sidebar",
-    base: "/orchestrator-app-sidebar/",
     description: "This is the plugin documentation",
     themeConfig: {
         nav: [

@@ -5,11 +5,11 @@ A Vue 2 plugin to create a sidebar menu.
 The plugin was created with `Vue 2` and is designed to work with `vue-router` and `fontawesome-free`.
 
 
-| Name               | Version  |
-|--------------------|----------|
-| `vue`              | `2.6.14` |
-| `vue-router`       | `3.5.1`  |
-| `fontawesome-free` | `6.0.0`  |
+| Name                            | Version  |
+|---------------------------------|----------|
+| `vue`                           | `2.6.14` |
+| `vue-router`                    | `3.5.1`  |
+| `@fortawesome/fontawesome-free` | `6.0.0`  |
 
 ## Installation
 ```bash
